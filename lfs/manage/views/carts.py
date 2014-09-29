@@ -316,7 +316,7 @@ def _get_filtered_carts(cart_filters):
     """
     """
     carts = Cart.objects.all().order_by("-modification_date")
-
+    '''
     # start
     start = cart_filters.get("start", "")
     s = start
@@ -336,5 +336,5 @@ def _get_filtered_carts(cart_filters):
         e = datetime.max
 
     carts = carts.filter(modification_date__range=(s, e))
-
+    '''
     return carts

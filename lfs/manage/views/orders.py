@@ -452,7 +452,7 @@ def _get_filtered_orders(order_filters):
     state_id = order_filters.get("state")
     if state_id is not None:
         orders = orders.filter(state=state_id)
-
+    '''
     # start
     start = order_filters.get("start", "")
     s = start
@@ -472,5 +472,5 @@ def _get_filtered_orders(order_filters):
         e = datetime.max
 
     orders = orders.filter(created__range=(s, e))
-
+    '''
     return orders

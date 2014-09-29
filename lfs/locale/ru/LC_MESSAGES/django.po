@@ -1850,7 +1850,7 @@ msgstr "Налог на товар"
 
 #: order/settings.py:13
 msgid "Submitted"
-msgstr "Подан"
+msgstr "Новый"
 
 #: order/settings.py:14
 msgid "Paid"
