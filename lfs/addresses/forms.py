@@ -1,5 +1,6 @@
 # django imports
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 
 # lfs imports
 from lfs.addresses.models import Address
@@ -60,15 +61,16 @@ class InvoiceAddressForm(AddressBaseForm):
     """
     Default form for LFS' invoice addresses.
     """
-    fields_before_postal = ("firstname", "lastname", "company_name")
+    fields_before_postal = ("firstname", "lastname")
     fields_after_postal = ("phone", "email")
+    fields_postal = ("line1", "city", "zip_code", "country")
 
     class Meta(AddressBaseForm.Meta):
         model = Address
+        #fields = ["firstname", "lastname", "line1", "city", "zip_code", "country", "phone", "email"]
 
     def __init__(self, *args, **kwargs):
         super(InvoiceAddressForm, self).__init__(*args, **kwargs)
-        self.fields["company_name"].required = settings.INVOICE_COMPANY_NAME_REQUIRED
         self.fields["phone"].required = settings.INVOICE_PHONE_REQUIRED
         self.fields["email"].required = settings.INVOICE_EMAIL_REQUIRED
 
@@ -79,6 +81,5 @@ class ShippingAddressForm(InvoiceAddressForm):
     """
     def __init__(self, *args, **kwargs):
         super(ShippingAddressForm, self).__init__(*args, **kwargs)
-        self.fields["company_name"].required = settings.SHIPPING_COMPANY_NAME_REQUIRED
         self.fields["phone"].required = settings.SHIPPING_PHONE_REQUIRED
         self.fields["email"].required = settings.SHIPPING_EMAIL_REQUIRED

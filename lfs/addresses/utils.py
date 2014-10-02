@@ -50,9 +50,9 @@ class AddressManagement(object):
         else:
             return {
                 "line1": self.address.line1,
-                "line2": self.address.line2,
+                #"line2": self.address.line2,
                 "city": self.address.city,
-                "state": self.address.state,
+                #"state": self.address.state,
                 "code": self.address.zip_code,
                 "country": self.address.country.code.upper(),
             }
@@ -127,9 +127,9 @@ class AddressManagement(object):
             return
         else:
             self.address.line1 = self.data.get("%s-line1" % self.type)
-            self.address.line2 = self.data.get("%s-line2" % self.type)
+            #self.address.line2 = self.data.get("%s-line2" % self.type)
             self.address.city = self.data.get("%s-city" % self.type)
-            self.address.state = self.data.get("%s-state" % self.type)
+            #self.address.state = self.data.get("%s-state" % self.type)
             self.address.zip_code = self.data.get("%s-code" % self.type)
 
             try:
