@@ -118,10 +118,12 @@
             class="number">
             {% trans 'Price' %}
         </th>
+        {% comment %}
         <th width="150px"
             class="number">
             {% trans 'Included VAT' %}
         </th>
+        {% endcomment %}
         <th width="150px"
             class="number">
             {% trans 'Total' %}
@@ -186,9 +188,11 @@
             <td class="number top">
                {{ item.product_price_gross|currency:request }}{% if item.product.price_unit %} / {{ item.product.price_unit }}{% endif %}
             </td>
+            {% comment %}
             <td class="number top">
                {{ item.product_tax|currency:request }}
             </td>
+            {% endcomment %}
             <td class="number top">
                {{ item.price_gross|currency:request }}
             </td>
@@ -224,7 +228,7 @@
         <td class="number">
             {{ current_order.shipping_price|currency:request }}
         </td>
-        <td class="number">{{ current_order.shipping_tax|currency:request }}</td>
+        {# td class="number">{{ current_order.shipping_tax|currency:request }}</td #}
         <td class="number">
             {{ current_order.shipping_price|currency:request }}
         </td>
@@ -241,7 +245,7 @@
         <td class="number">
             {{ current_order.payment_price|currency:request }}
         </td>
-        <td class="number">{{ current_order.payment_tax|currency:request }}</td>
+        {# <td class="number">{{ current_order.payment_tax|currency:request }}</td> #}
         <td class="number">
             {{ current_order.payment_price|currency:request }}
         </td>
@@ -252,6 +256,7 @@
             {{ current_order.price|currency:request }}
         </td>
     </tr>
+    {% comment %}
     <tr>
         <td colspan="7"
             class="number tax">
@@ -259,6 +264,7 @@
             {{ current_order.tax|currency:request }}
         </td>
     </tr>
+    {% endcomment %}
 </table>
 {% if current_order.message %}
     <table class="lfs-manage-table">
