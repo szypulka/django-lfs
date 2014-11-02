@@ -242,7 +242,7 @@ msgstr "Заголовок META"
 #: catalog/models.py:137 catalog/models.py:481
 #: catalog/migrations/0001_initial.py:53 catalog/migrations/0001_initial.py:86
 msgid "Meta keywords"
-msgstr "Ключевые META"
+msgstr "Ключевые слова META"
 
 #: catalog/models.py:138 catalog/models.py:482
 #: catalog/migrations/0001_initial.py:54 catalog/migrations/0001_initial.py:87
@@ -250,7 +250,6 @@ msgid "Meta description"
 msgstr "Описание META"
 
 #: catalog/models.py:143
-#, fuzzy
 msgid "Category template"
 msgstr "Шаблон категории"
 
@@ -364,7 +363,7 @@ msgstr "Активно"
 
 #: catalog/models.py:497 catalog/migrations/0001_initial.py:92
 msgid "Deliverable"
-msgstr "Осуществимо"
+msgstr "Доступно для доставки"
 
 #: catalog/models.py:498 catalog/migrations/0001_initial.py:93
 msgid "Manual delivery time"
@@ -373,7 +372,7 @@ msgstr "Индивидуальный срок поставки"
 #: catalog/models.py:499 catalog/migrations/0001_initial.py:94
 #: shipping/models.py:61 shipping/migrations/0001_initial.py:31
 msgid "Delivery time"
-msgstr "Срок поставки"
+msgstr "Срок доставки"
 
 #: catalog/models.py:500 catalog/migrations/0001_initial.py:95
 msgid "Order time"
@@ -407,7 +406,7 @@ msgstr "Наличие"
 #: templates/manage/criteria/weight_criterion.html:17
 #: templates/manage/criteria/width_criterion.html:16
 msgid "Weight"
-msgstr "вес"
+msgstr "Вес"
 
 #: catalog/models.py:507 catalog/migrations/0001_initial.py:100
 #: criteria/migrations/0001_initial.py:28 criteria/models/criteria.py:251
@@ -474,7 +473,7 @@ msgstr "Подтип"
 
 #: catalog/models.py:517 catalog/migrations/0001_initial.py:105
 msgid "Default variant"
-msgstr "Обычный вариант"
+msgstr "Вариант по умолчанию"
 
 #: catalog/models.py:518 catalog/migrations/0001_initial.py:106
 msgid "Variants display type"
@@ -502,7 +501,7 @@ msgstr "Активная цена"
 
 #: catalog/models.py:529 catalog/migrations/0003_add_for_sale_attributes.py:11
 msgid "Active for sale"
-msgstr "Активна распродажа"
+msgstr "Активная распродажа"
 
 #: catalog/models.py:530 catalog/migrations/0003_add_for_sale_attributes.py:14
 msgid "Active for sale price"
@@ -540,7 +539,6 @@ msgid "Active dimensions"
 msgstr "Активные размеры"
 
 #: catalog/models.py:539
-#, fuzzy
 msgid "Product template"
 msgstr "Шаблон товара"
 
@@ -605,7 +603,7 @@ msgstr "Свойство"
 #: criteria/migrations/0001_initial.py:35
 #: criteria/models/criteria_objects.py:19
 msgid "Content type"
-msgstr "Тип наполнения"
+msgstr "Тип содержания"
 
 #: catalog/models.py:1401 catalog/migrations/0001_initial.py:154
 #: criteria/migrations/0001_initial.py:34
@@ -613,7 +611,7 @@ msgstr "Тип наполнения"
 #: criteria/models/criteria_objects.py:16
 #: criteria/models/criteria_objects.py:20
 msgid "Content id"
-msgstr "Код наполнения"
+msgstr ""
 
 #: catalog/models.py:1424 catalog/migrations/0001_initial.py:25
 #: templates/manage/manage_base.html:103
@@ -730,7 +728,7 @@ msgstr "Текстовое поле"
 
 #: catalog/settings.py:75
 msgid "Select field"
-msgstr "Выбор поля"
+msgstr "Выпадающий список"
 
 #: catalog/settings.py:83
 msgid "Automatic"
@@ -745,7 +743,6 @@ msgid "Manual steps"
 msgstr "Задаваемый шаг"
 
 #: catalog/settings.py:98
-#, fuzzy
 msgid "Category with products"
 msgstr "Категория с товарами"
 
@@ -754,7 +751,6 @@ msgid "Category with products horizontal"
 msgstr "Категория с товарами (горизонтальная)"
 
 #: catalog/settings.py:106
-#, fuzzy
 msgid "Category with subcategories"
 msgstr "Категория с подкатегориями"
 
@@ -763,17 +759,14 @@ msgid "Category with subcategories horizontal"
 msgstr "Категория с подкатегориями (горизонтальная)"
 
 #: catalog/settings.py:117
-#, fuzzy
 msgid "Default template"
 msgstr "Стандартный шаблон"
 
 #: catalog/settings.py:121
-#, fuzzy
 msgid "Price on top"
 msgstr "Цена сверху"
 
 #: catalog/settings.py:125
-#, fuzzy
 msgid "Description on top"
 msgstr "Описание сверху"
 
@@ -890,7 +883,7 @@ msgstr "Год срока действия"
 
 #: checkout/forms.py:47
 msgid "Verification Number"
-msgstr "Проверочный номер"
+msgstr "CVV"
 
 #: checkout/forms.py:49
 msgid "Same as invoice"
@@ -898,11 +891,11 @@ msgstr "Совпадает с платежным"
 
 #: checkout/forms.py:50
 msgid "Your message to us"
-msgstr "Ваше сообщение нам"
+msgstr "Ваше сообщение"
 
 #: checkout/forms.py:66
 msgid "This field is required."
-msgstr "Поле обязательно к заполнению."
+msgstr "Обязательное поле"
 
 #: checkout/settings.py:7
 msgid "Anonymous and Authenticated"
@@ -951,11 +944,11 @@ msgstr "Владелец магазина"
 
 #: core/models.py:118 core/migrations/0001_initial.py:30
 msgid "From e-mail address"
-msgstr "e-mail адрес отправителя"
+msgstr "С email-адреса"
 
 #: core/models.py:119 core/migrations/0001_initial.py:34
 msgid "Notification email addresses"
-msgstr "Адреса e-mail для оповещений"
+msgstr "Адреса email для оповещений"
 
 #: core/models.py:128 core/migrations/0001_initial.py:25
 msgid "Google Analytics ID"
@@ -980,7 +973,7 @@ msgstr "Страна по умолчанию"
 
 #: core/models.py:134 core/migrations/0002_add_default_currency.py:11
 msgid "Default Currency"
-msgstr "Стандартная валюта"
+msgstr "Валюта по умолчанию"
 
 #: core/models.py:136 core/migrations/0001_initial.py:29
 msgid "Checkout type"
@@ -1138,7 +1131,7 @@ msgstr "Пароли не совпадают."
 
 #: customer/forms.py:55
 msgid "That email address is already in use."
-msgstr "С данным e-mail уже зарегистрировались."
+msgstr "Данный e-mail уже зарегистрирован."
 
 #: customer/models.py:25 customer/migrations/0001_initial.py:50
 msgid "Selected shipping method"
@@ -1247,7 +1240,7 @@ msgstr "---"
 
 #: export/settings.py:11
 msgid "Default"
-msgstr "Стандарт"
+msgstr "По умолчанию"
 
 #: export/settings.py:12
 msgid "Cheapest"
@@ -1542,7 +1535,6 @@ msgid "Voucher data has been save."
 msgstr "Данные сертификатов сохранены."
 
 #: manage/views/voucher.py:267
-#, fuzzy
 msgid "Voucher group and assigned vouchers have been deleted."
 msgstr "Группа сертификатов и назначенные серт-ы удалены."
 
@@ -1714,7 +1706,7 @@ msgstr "Фамилия плательщика"
 
 #: order/models.py:52 order/migrations/0003_add_company_name.py:11
 msgid "Invoice company name"
-msgstr "Огранизация-плательщик"
+msgstr "Организация-плательщик"
 
 #: order/models.py:53 order/migrations/0001_initial.py:49
 msgid "Invoice street"
@@ -1818,11 +1810,11 @@ msgstr "Сообщение"
 
 #: order/models.py:120 order/migrations/0001_initial.py:21
 msgid "Price net"
-msgstr "Окончательная цена (со скид.)"
+msgstr "Цена net"
 
 #: order/models.py:121 order/migrations/0001_initial.py:23
 msgid "Price gross"
-msgstr "Фактурная цена (без скид.)"
+msgstr "Цена gross"
 
 #: order/models.py:129 order/migrations/0001_initial.py:14
 msgid "Product quantity"
@@ -1887,7 +1879,7 @@ msgstr "Файл"
 
 #: payment/models.py:64 payment/migrations/0001_initial.py:16
 msgid "note"
-msgstr "примеч."
+msgstr "прим."
 
 #: payment/models.py:65 payment/models.py:107
 #: payment/migrations/0001_initial.py:17 payment/migrations/0001_initial.py:30
