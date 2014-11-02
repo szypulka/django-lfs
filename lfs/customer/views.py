@@ -203,11 +203,12 @@ def addresses(request, template_name="lfs/customer/addresses.html"):
     customer = lfs.customer.utils.get_or_create_customer(request)
 
     if request.method == "POST":
-        iam = AddressManagement(customer, customer.default_invoice_address, "invoice", request.POST)
+        #iam = AddressManagement(customer, customer.default_invoice_address, "invoice", request.POST)
         sam = AddressManagement(customer, customer.default_shipping_address, "shipping", request.POST)
 
-        if iam.is_valid() and sam.is_valid():
-            iam.save()
+        #if iam.is_valid() and sam.is_valid():
+        if sam.is_valid():  
+            #iam.save()
             sam.save()
 
             customer.sync_default_to_selected_addresses(force=True)
@@ -226,7 +227,7 @@ def addresses(request, template_name="lfs/customer/addresses.html"):
     return lfs.core.utils.render_to_message_response(
         template_name, RequestContext(request, {
             "shipping_address_inline": sam.render(request),
-            "invoice_address_inline": iam.render(request),
+            #"invoice_address_inline": iam.render(request),
             "current": "addresses"
         }),
         msg=msg,
